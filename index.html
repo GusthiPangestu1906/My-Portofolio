@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Gusthi Pangestu</title>
+    
+    <!-- Boxicons untuk Ikon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CONTAINER UTAMA (Wrapper) -->
+    <div class="container">
+        
+        <!-- NAVBAR ATAS -->
+        <header class="header">
+            <a href="#" class="logo">
+                <img src="img/logo-placeholder.png" alt="G" class="logo-img"> <!-- Bisa diganti huruf G keren -->
+                <span>gusthipangestu@mail.com</span>
+            </a>
+
+            <nav class="navbar">
+                <a href="#services">Expertise</a>
+                <a href="#projects">Works</a>
+                <a href="#activities">Activities</a>
+                <a href="#certificates">Certifications</a> <!-- Menu Baru -->
+                <a href="#about">About</a>
+            </nav>
+
+            <a href="#contact" class="btn-hire">Hire Me!</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="badge">I am Gusthi</div>
+                <h1>Web Developer +<br>UX Designer</h1>
+                <p>Mahasiswa Teknik Informatika PENS yang memadukan keahlian Jaringan (Cisco) dan Web Development (Laravel), dengan latar belakang kuat dalam Desain Grafis.</p>
+                
+                <div class="hero-btns">
+                    <a href="CV_Gusthi_Pangestu.pdf" class="btn-outline" download><i class='bx bx-download'></i> Download CV</a>
+                    <div class="socials">
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-img">
+                <div class="img-box">
+                    <img src="img/profile.jpg" alt="Gusthi Pangestu">
+                </div>
+                <div class="rotate-text">
+                    <div class="text">
+                        <p>• Graphic Designer • Network Enthusiast • Web Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="stats">
+            <div class="stat-item">
+                <h3>3+</h3>
+                <p>Years of<br>Learning</p>
+            </div>
+            <div class="stat-item">
+                <h3>10+</h3>
+                <p>Projects<br>Completed</p>
+            </div>
+            <div class="stat-item">
+                <h3>7+</h3>
+                <p>Professional<br>Certifications</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Dedication<br>to Quality</p>
+            </div>
+        </section>
+
+        <!-- SKILLS & EXPERTISE (Grid Layout) -->
+        <section class="services" id="services">
+            <div class="section-header">
+                <h2>My Quality Expertise</h2>
+                <p>Kombinasi skill teknis dan kreatif untuk solusi digital yang lengkap.</p>
+            </div>
+
+            <div class="services-list">
+                <!-- Item 1: Graphic Design (Expanded) -->
+                <div class="service-item active">
+                    <div class="service-header">
+                        <span class="num">01</span>
+                        <h3>Graphic Design (Expertise)</h3>
+                        <i class='bx bx-chevron-down toggle-icon'></i>
+                    </div>
+                    <div class="service-desc">
+                        <p>Keahlian utama dalam branding, UI Design dengan Figma, dan pembuatan konten visual profesional menggunakan Adobe Photoshop & Canva.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Network Engineer -->
+                <div class="service-item">
+                    <div class="service-header">
+                        <span class="num">02</span>
+                        <h3>Network Engineer (Learning)</h3>
+                        <i class='bx bx-chevron-down toggle-icon'></i>
+                    </div>
+                    <div class="service-desc">
+                        <p>Sedang mendalami konfigurasi perangkat Cisco (Routing & Switching), MikroTik MTCNA, dan manajemen jaringan dasar.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Web Dev -->
+                <div class="service-item">
+                    <div class="service-header">
+                        <span class="num">03</span>
+                        <h3>Laravel Developer (Learning)</h3>
+                        <i class='bx bx-chevron-down toggle-icon'></i>
+                    </div>
+                    <div class="service-desc">
+                        <p>Mempelajari pengembangan backend website modern menggunakan framework PHP Laravel, HTML, dan CSS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS (Grid Card Modern) -->
+        <section class="works" id="projects">
+            <div class="section-header center">
+                <h2>My Recent Works</h2>
+                <div class="work-tabs">
+                    <span class="active">All</span>
+                    <span>Web</span>
+                    <span>Design</span>
+                </div>
+            </div>
+
+            <div class="work-grid">
+                <!-- Project 1 -->
+                <div class="work-card">
+                    <div class="work-img">
+                        <img src="img/project1.png" alt="Honda Cirebon">
+                        <div class="work-overlay">
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>Web Optimization</h3>
+                        <p>Honda Cirebon & Tanah Murah Bogor</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="work-card">
+                    <div class="work-img">
+                        <img src="img/project2.png" alt="Travely">
+                        <div class="work-overlay">
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>UI/UX Design</h3>
+                        <p>Travely App Interface</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="work-card">
+                    <div class="work-img">
+                        <img src="img/project3.png" alt="Hasil Tani">
+                        <div class="work-overlay">
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>Business Plan</h3>
+                        <p>Hasil Tani Digital Platform</p>
+                    </div>
+                </div>
+                
+                 <!-- Project 4 (Placeholder biar grid genap/bagus) -->
+                 <div class="work-card">
+                    <div class="work-img">
+                        <img src="img/project2.png" alt="More"> <!-- Pakai gambar yg ada aja -->
+                        <div class="work-overlay">
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>More Projects</h3>
+                        <p>Coming Soon</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACTIVITIES (Horizontal Scroll / Grid) -->
+        <section class="experience" id="activities">
+            <div class="row">
+                <!-- KOLOM KIRI: ORGANISASI -->
+                <div class="col-half">
+                    <h3 class="title"><i class='bx bx-group'></i> Organizations</h3>
+                    
+                    <div class="exp-box">
+                        <span class="year">2024 - Sekarang</span>
+                        <h4>LMB (Lembaga Minat Bakat)</h4>
+                        <span class="place">Staff Dept. MEDFO</span>
+                        <p>Aktif di departemen Media dan Informasi. Bertanggung jawab mengelola publikasi dan informasi kegiatan minat bakat mahasiswa.</p>
+                    </div>
+
+                    <div class="exp-box">
+                        <span class="year">2024 - Sekarang</span>
+                        <h4>PENS E-SPORT</h4>
+                        <span class="place">Staff Divisi MEDFO</span>
+                        <p>Staff pasif yang siap membantu kebutuhan media, desain, dan publikasi komunitas saat ada event atau panggilan.</p>
+                    </div>
+                </div>
+
+                <!-- KOLOM KANAN: KEPANITIAAN -->
+                <div class="col-half">
+                    <h3 class="title"><i class='bx bx-certification'></i> Committees</h3>
+                    
+                    <!-- 2025 EVENTS -->
+                    <div class="exp-box">
+                        <span class="year">2025</span>
+                        <h4>HIMIT Events (PKT PKO & ITDS)</h4>
+                        <span class="place">Divisi PDD & Operator</span>
+                        <p>Operator acara Pekan Komunitas Olahraga (PKT PKO) dan Divisi PDD untuk pengenalan himpunan (ITDS Insight) ke maba.</p>
+                    </div>
+
+                    <div class="exp-box">
+                        <span class="year">2025</span>
+                        <h4>LMB Events (MBEX & ELTAFEST)</h4>
+                        <span class="place">Operator & Divisi PDD/K2</span>
+                        <p>Bertugas sebagai Operator untuk Minat Bakat Expo (MBEX) dan acara perlombaan non-akademik ELTAFEST 25.</p>
+                    </div>
+
+                    <div class="exp-box">
+                        <span class="year">2025</span>
+                        <h4>PMCC 2025</h4>
+                        <span class="place">Judge (Juri)</span>
+                        <p>Bertugas sebagai Juri untuk menilai kompetisi PMCC tahun 2025.</p>
+                    </div>
+
+                    <!-- 2024 EVENTS -->
+                    <div class="exp-box">
+                        <span class="year">2024</span>
+                        <h4>Lead Designer (PMCC & AT-FEST)</h4>
+                        <span class="place">Divisi PDD</span>
+                        <p>Menghandle seluruh kebutuhan desain visual (feeds, banner, merch) untuk acara besar PMCC 2024 dan AT-FEST 2024.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARKETING & SKILL CERTIFICATES (Section Baru) -->
+        <section class="works" id="certificates"> <!-- Menggunakan style 'works' agar konsisten grid-nya -->
+            <div class="section-header center">
+                <h2>Marketing & Skill Upgrades</h2>
+                <p>Pelatihan dan seminar untuk meningkatkan kemampuan komunikasi, branding, dan bisnis.</p>
+            </div>
+
+            <div class="work-grid">
+                <!-- Cert 1: Personal Branding -->
+                <div class="work-card">
+                    <div class="work-img">
+                        <!-- PENTING: Rename file 81.jpg menjadi cert-branding.jpg -->
+                        <img src="81.png" alt="Personal Branding">
+                        <div class="work-overlay">
+                            <a href="#"><i class='bx bx-show'></i></a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>Personal Branding</h3>
+                        <p>Seminar Nasional "Setup Your Personal Branding" by Harriz Vriza (2025)</p>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Content Creator -->
+                <div class="work-card">
+                    <div class="work-img">
+                        <!-- PENTING: Rename file 66.jpg menjadi cert-content.jpg -->
+                        <img src="66.png" alt="Content Creator">
+                        <div class="work-overlay">
+                            <a href="#"><i class='bx bx-show'></i></a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>Content Creator Strategy</h3>
+                        <p>Seminar "Make Money From Ur Social Media" (2025)</p>
+                    </div>
+                </div>
+
+                <!-- Cert 3: Entrepreneur -->
+                <div class="work-card">
+                    <div class="work-img">
+                        <!-- PENTING: Rename file 80.jpg menjadi cert-entre.jpg -->
+                        <img src="80.png" alt="Entrepreneur">
+                        <div class="work-overlay">
+                            <a href="80.png"><i class='bx bx-show'></i></a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>Entrepreneurship</h3>
+                        <p>Pelatihan "Zero Point to High Point" (2025)</p>
+                    </div>
+                </div>
+
+                <!-- Cert 4: Public Speaking -->
+                <div class="work-card">
+                    <div class="work-img">
+                        <!-- PENTING: Rename file 80_2025...jpg menjadi cert-speaking.jpg -->
+                        <img src="80_20250104_094824_0079.png" alt="Public Speaking">
+                        <div class="work-overlay">
+                            <a href="#"><i class='bx bx-show'></i></a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>Public Speaking</h3>
+                        <p>Pelatihan "Dare To Speak To Get Attention" (2025)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS ICONS (Grid Kecil) -->
+        <section class="my-skills">
+            <div class="section-header center">
+                <h2>My Tech Skills</h2>
+                <p>Tools & Teknologi yang saya gunakan.</p>
+            </div>
+            <div class="skills-wrapper">
+                <div class="skill-item">
+                    <i class='bx bxl-figma'></i>
+                    <span>90%</span>
+                    <p>Figma</p>
+                </div>
+                <div class="skill-item">
+                    <i class='bx bxl-adobe'></i>
+                    <span>85%</span>
+                    <p>Photoshop</p>
+                </div>
+                <div class="skill-item">
+                    <i class='bx bx-network-chart'></i>
+                    <span>70%</span>
+                    <p>Cisco</p>
+                </div>
+                <div class="skill-item">
+                    <i class='bx bxl-php'></i>
+                    <span>60%</span>
+                    <p>Laravel</p>
+                </div>
+                <div class="skill-item">
+                    <i class='bx bxl-html5'></i>
+                    <span>80%</span>
+                    <p>HTML/CSS</p>
+                </div>
+                <div class="skill-item">
+                    <i class='bx bxl-wordpress'></i>
+                    <span>75%</span>
+                    <p>WordPress</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & FOOTER (Gabung) -->
+        <section class="contact" id="contact">
+            <div class="contact-card">
+                <h2>Let's work together!</h2>
+                <p>Saya terbuka untuk kolaborasi proyek atau diskusi teknologi.</p>
+                
+                <form action="#">
+                    <div class="input-group">
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Email address">
+                        <input type="tel" placeholder="Phone number">
+                    </div>
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="item">
+                        <i class='bx bxs-phone'></i>
+                        <span>+62 823-3401-5531</span>
+                    </div>
+                    <div class="item">
+                        <i class='bx bxs-envelope'></i>
+                        <span>gusthipangestu1906@gmail.com</span>
+                    </div>
+                    <div class="item">
+                        <i class='bx bxs-map'></i>
+                        <span>Surabaya, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p class="copyright">© 2025 Gusthi Pangestu. All rights reserved.</p>
+            </footer>
+        </section>
+
+    </div> <!-- END CONTAINER -->
+
+    <!-- Library JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
