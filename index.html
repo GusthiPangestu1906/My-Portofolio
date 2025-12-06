@@ -5,55 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Gusthi Pangestu</title>
     
+    <!-- Boxicons untuk Ikon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Link ke File CSS Eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="bg-shape shape-1"></div>
-    <div class="bg-shape shape-2"></div>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">
+            <span>Gusthi</span> Pangestu
+        </a>
 
-    <div class="container glass-container">
-        
-        <header class="header">
-            <a href="#" class="logo">
-                <span>Gusthi Pangestu</span>
-            </a>
+        <nav class="navbar">
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact" class="btn-hire">Hubungi Saya</a>
+        </nav>
 
-            <nav class="navbar">
-                <a href="#services">Services</a>
-                <a href="#experience">Experience</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact" class="btn-hire">Hubungi Saya</a>
-            </nav>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
 
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </header>
-
+    <div class="container">
+        <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-content">
                 <div class="badge-modern"><i class='bx bx-check-circle'></i> Open for Hire</div>
-                <h1><span class="txt-gradient">LCD Operator</span> &<br><span class="txt-gradient">Graphic Designer</span></h1>
-                <p>Menyediakan jasa profesional sebagai <strong>Operator LCD (OBS Studio)</strong> untuk kelancaran event live Anda, serta layanan <strong>Junior Graphic Design</strong> menggunakan Canva & Adobe Photoshop untuk kebutuhan visual yang menarik.</p>
+                <h1><span class="txt-gradient">LCD Operator</span> &<br>Graphic Designer</h1>
+                <p>Menyediakan jasa profesional sebagai <strong>Operator LCD (OBS Studio)</strong> untuk kelancaran event live Anda, serta layanan <strong>Junior Graphic Design</strong> untuk kebutuhan visual yang menarik.</p>
                 
                 <div class="hero-btns">
                     <a href="#contact" class="btn-primary-modern">Hubungi Sekarang</a>
+                    
+                    <!-- UPDATE: Link Sosial Media -->
                     <div class="socials">
-                        <a href="#"><i class='bx bxl-linkedin'></i></a>
-                        <a href="#"><i class='bx bxl-instagram'></i></a>
-                        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/gusthi-pangestu-394bb42a7/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B8rosZflJSt2kKV399zZczg%3D%3D" target="_blank">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/gusthipangestu/#" target="_blank">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        
+                        <!-- WhatsApp (Menyesuaikan dengan kontak bawah) -->
+                        <a href="https://wa.me/6282334015531" target="_blank">
+                            <i class='bx bxl-whatsapp'></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="hero-img">
                 <div class="img-box-modern">
-                    <img src="img/profile.jpg" alt="Gusthi Pangestu">
+                    <!-- Menggunakan foto asli Gusthi Pangestu (2).JPG -->
+                    <img src="Gusthi Pangestu (2).JPG" alt="Gusthi Pangestu">
                 </div>
             </div>
         </section>
 
+        <!-- Services Section -->
         <section class="services" id="services">
             <div class="section-header center">
                 <h2>Layanan Saya</h2>
@@ -61,12 +78,13 @@
             </div>
 
             <div class="services-list">
-                <div class="service-item glass-card active">
+                <div class="service-item active">
                     <div class="service-header">
                         <div class="icon-box">
                             <i class='bx bx-desktop'></i>
                         </div>
                         <h3>Operator LCD & OBS Studio</h3>
+                        <i class='bx bx-chevron-down toggle-icon'></i>
                     </div>
                     <div class="service-desc">
                         <p>Berpengalaman menangani visual acara live. Keahlian meliputi:
@@ -77,12 +95,13 @@
                     </div>
                 </div>
 
-                <div class="service-item glass-card">
+                <div class="service-item">
                     <div class="service-header">
                         <div class="icon-box">
                            <i class='bx bx-palette'></i>
                         </div>
                         <h3>Junior Graphic Design</h3>
+                        <i class='bx bx-chevron-down toggle-icon'></i>
                     </div>
                     <div class="service-desc">
                         <p>Pembuatan desain visual yang komunikatif menggunakan <strong>Canva</strong> dan <strong>Adobe Photoshop</strong>.
@@ -95,138 +114,164 @@
             </div>
         </section>
 
-        <section class="experience" id="experience">
-            <div class="section-header">
-                <h2>Pengalaman Event & Organisasi</h2>
-                <p>Rekam jejak saya dalam menangani Divisi PDD, Operator, dan Kepanitiaan.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-half">
-                    <div class="year-badge">2025</div>
-                    
-                    <div class="exp-box glass-card">
-                        <h4>Operator & Divisi PDD</h4>
-                        <span class="place highlight">PKT PKO HIMIT 2025</span>
-                        <p>Bertugas dalam acara Pekan Komunitas Olahraga dan Teknologi Himpunan Teknik Informatika.</p>
-                    </div>
-
-                    <div class="exp-box glass-card">
-                        <h4>Anggota Divisi PDD</h4>
-                        <span class="place highlight">ITDS INSIGHT 2025</span>
-                        <p>Acara Pengenalan Himpunan Teknik Informatika kepada Mahasiswa Baru angkatan 25.</p>
-                    </div>
-
-                    <div class="exp-box glass-card special-role">
-                        <h4><i class='bx bx-gavel'></i> Tournament Judge</h4>
-                        <span class="place highlight">PMCC 2025 (PUBG Mobile Campus Challenge)</span>
-                        <p>Bertugas sebagai Judge dalam turnamen eSports antar mahasiswa. Tanggung jawab utama:</p>
-                        
-                        <div class="duties-grid">
-                            <div class="duty-item">
-                                <i class='bx bx-cctv'></i>
-                                <span>Mengawasi Pertandingan</span>
-                            </div>
-                            <div class="duty-item">
-                                <i class='bx bx-shield-quarter'></i>
-                                <span>Menjaga Keadilan Neutral</span>
-                            </div>
-                            <div class="duty-item">
-                                <i class='bx bx-error-circle'></i>
-                                <span>Mengambil Keputusan</span>
-                            </div>
-                             <div class="duty-item">
-                                <i class='bx bx-list-check'></i>
-                                <span>Memverifikasi Hasil</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="exp-box glass-card">
-                        <h4>Operator & Divisi PDD</h4>
-                        <span class="place highlight">Minat Bakat Expo (MBEX) 25</span>
-                        <p>Acara pengenalan UKM (Unit Minat Bakat) kepada seluruh mahasiswa baru.</p>
-                    </div>
-
-                    <div class="exp-box glass-card">
-                        <h4>Operator & Divisi K2</h4>
-                        <span class="place highlight">ELTAFEST 25 (LMB)</span>
-                        <p>Acara perlombaan yang diadakan LMB untuk mencari Minat Bakat Mahasiswa.</p>
-                    </div>
-                </div>
-
-                <div class="col-half">
-                    <div class="year-badge">2024</div>
-                    
-                    <div class="exp-box glass-card">
-                        <h4>Lead Design (Divisi PDD)</h4>
-                        <span class="place highlight">PMCC 2024</span>
-                        <p>Menghandle seluruh desain untuk PUBG Mobile Campus Challenge, turnamen eSports tingkat mahasiswa.</p>
-                    </div>
-
-                    <div class="exp-box glass-card">
-                        <h4>Lead Design (Divisi PDD)</h4>
-                        <span class="place highlight">AT-FEST 2024</span>
-                        <p>Menghandle semua desain Expo product IT yang dihasilkan oleh mahasiswa PRODI IT semester 5.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="my-skills">
+        <!-- Skills Section -->
+        <section class="my-skills" id="skills">
             <div class="section-header center">
                 <h2>Tools Keahlian</h2>
+                <p>Software yang saya kuasai untuk menunjang produktivitas dan kreativitas.</p>
             </div>
+            
             <div class="skills-wrapper-modern">
-                <div class="skill-card glass-card">
-                    <i class='bx bx-laptop icon-obs'></i>
+                <!-- OBS Studio -->
+                <div class="skill-card card-obs">
+                    <div class="icon-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/OBS_Studio_logo.png" alt="OBS Studio" class="tool-logo">
+                    </div>
                     <h3>OBS Studio</h3>
                     <div class="skill-level expert">Expert</div>
                 </div>
-                <div class="skill-card glass-card">
-                    <i class='bx bxl-adobe icon-ps'></i>
+
+                <!-- Photoshop -->
+                <div class="skill-card card-ps">
+                    <div class="icon-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Photoshop_CC_icon.png/500px-Photoshop_CC_icon.png" alt="Adobe Photoshop" class="tool-logo">
+                    </div>
                     <h3>Photoshop</h3>
                     <div class="skill-level intermediate">Intermediate</div>
                 </div>
-                <div class="skill-card glass-card">
-                    <i class='bx bxl-canva icon-canva'></i>
+
+                <!-- Canva -->
+                <div class="skill-card card-canva">
+                    <div class="icon-wrapper">
+                        <img src="https://public.canva.site/logo/media/dfb96cc174513093cd6ed61489ccb750.svg" alt="Canva" class="tool-logo">
+                    </div>
                     <h3>Canva</h3>
                     <div class="skill-level advanced">Advanced</div>
                 </div>
-                <div class="skill-card glass-card">
-                    <i class='bx bx-slideshow icon-vmix'></i>
-                    <h3>vMix / PPT</h3>
-                    <div class="skill-level expert">Expert</div>
-                </div>
             </div>
         </section>
+    </div>
 
+    <!-- EXPERIENCE SECTION (FULL WIDTH DARK) -->
+    <div class="experience-section-wrapper" id="experience">
+        <div class="container">
+            <section>
+                <div class="section-header center">
+                    <h2>Pengalaman Profesional</h2>
+                    <p>Rekam jejak dalam manajemen event, desain visual, dan kompetisi.</p>
+                </div>
+
+                <div class="experience-grid">
+                    <!-- Card 1 -->
+                    <div class="exp-card">
+                        <span class="exp-tag tag-design">LEAD DESIGNER</span>
+                        <span class="exp-year">2024</span>
+                        <h3>Head of Creative Design</h3>
+                        <div class="exp-event">
+                            <i class='bx bx-trophy'></i> PMCC 2024
+                        </div>
+                        <p>Bertanggung jawab penuh atas seluruh identitas visual turnamen eSports PUBG Mobile Campus Challenge (Feeds, Banner, Merchandise). Menciptakan visual yang menarik ribuan atensi mahasiswa.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="exp-card">
+                        <span class="exp-tag tag-design">LEAD DESIGNER</span>
+                        <span class="exp-year">2024</span>
+                        <h3>Lead Visual & Branding</h3>
+                        <div class="exp-event">
+                            <i class='bx bx-calendar-event'></i> AT-FEST 2024
+                        </div>
+                        <p>Menghandle semua aset desain untuk Expo Product IT semester 5. Memastikan konsistensi branding produk teknologi mahasiswa agar terlihat profesional di mata pengunjung.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="exp-card">
+                        <span class="exp-tag tag-operator">OPERATOR LCD/OBS</span>
+                        <span class="exp-year">2025</span>
+                        <h3>Main Operator Visual</h3>
+                        <div class="exp-event">
+                            <i class='bx bx-desktop'></i> PKT PKO HIMIT 2025
+                        </div>
+                        <p>Bertugas sebagai operator utama dalam Pekan Komunitas Olahraga & Teknologi. Mengelola transisi visual dan display live event tanpa kendala teknis.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="exp-card">
+                        <span class="exp-tag tag-operator">OPERATOR LCD/OBS</span>
+                        <span class="exp-year">2025</span>
+                        <h3>Visual Operator</h3>
+                        <div class="exp-event">
+                            <i class='bx bx-slideshow'></i> MBEX & ELTAFEST 25
+                        </div>
+                        <p>Menangani kebutuhan visual untuk Minat Bakat Expo dan ajang pencarian bakat. Memastikan materi presentasi dan video tampil sempurna di layar LED.</p>
+                    </div>
+
+                    <!-- Card 5 (Highlight) -->
+                    <div class="exp-card highlight-card">
+                        <span class="exp-tag tag-judge">OFFICIAL JUDGE</span>
+                        <span class="exp-year">2025</span>
+                        <h3>Tournament Judge</h3>
+                        <div class="exp-event">
+                            <i class='bx bx-gavel'></i> PMCC 2025
+                        </div>
+                        <p>Dipercaya sebagai juri/wasit dalam turnamen PUBG Mobile. Bertugas mengawasi jalannya pertandingan, menjaga keadilan, dan memverifikasi hasil kompetisi.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="exp-card">
+                        <span class="exp-tag tag-design">GRAPHIC DESIGNER</span>
+                        <span class="exp-year">2025</span>
+                        <h3>Staff Divisi PDD</h3>
+                        <div class="exp-event">
+                            <i class='bx bx-group'></i> ITDS INSIGHT 2025
+                        </div>
+                        <p>Memproduksi materi publikasi untuk pengenalan himpunan kepada mahasiswa baru, memastikan informasi tersampaikan dengan desain yang komunikatif.</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Contact Section -->
         <section class="contact" id="contact">
-            <div class="contact-card glass-card center">
+            <div class="contact-card">
                 <h2>Siap Kolaborasi?</h2>
                 <p>Diskusikan kebutuhan Operator LCD atau Desain Grafis untuk acara Anda.</p>
                 
-                <div class="contact-info-modern">
-                    <a href="mailto:gusthipangestu1906@gmail.com" class="contact-pill">
-                        <i class='bx bxs-envelope'></i>
-                        <span>Email Me</span>
+                <div class="contact-buttons-vertical">
+                    <a href="mailto:gusthipangestu1906@gmail.com" class="contact-btn-wide">
+                        <div class="btn-icon">
+                            <i class='bx bxs-envelope'></i>
+                        </div>
+                        <div class="btn-text">
+                            <span>Email Me</span>
+                            <small>gusthipangestu1906@gmail.com</small>
+                        </div>
                     </a>
-                    <a href="https://wa.me/6282334015531" class="contact-pill">
-                        <i class='bx bxs-phone'></i>
-                        <span>WhatsApp</span>
+                    <a href="https://wa.me/6282334015531" class="contact-btn-wide">
+                        <div class="btn-icon">
+                            <i class='bx bxs-phone'></i>
+                        </div>
+                        <div class="btn-text">
+                            <span>WhatsApp</span>
+                            <small>+62 823-3401-5531</small>
+                        </div>
                     </a>
                 </div>
-                <p class="location"><i class='bx bxs-map'></i> Surabaya, Indonesia</p>
+
+                <div class="contact-footer-info">
+                    <p class="location"><i class='bx bxs-map'></i> Surabaya, Indonesia</p>
+                    <p class="copyright">© 2025 Gusthi Pangestu. All rights reserved.</p>
+                </div>
             </div>
-
-            <footer>
-                <p class="copyright">© 2025 Gusthi Pangestu. All rights reserved.</p>
-            </footer>
         </section>
+    </div>
 
-    </div> 
-
+    <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Link ke File JS Eksternal -->
     <script src="script.js"></script>
 </body>
 </html>

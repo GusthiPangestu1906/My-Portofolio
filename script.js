@@ -1,5 +1,4 @@
 /*==================== SERVICES ACCORDION ====================*/
-// Efek klik untuk expand/collapse skill
 const serviceItems = document.querySelectorAll('.service-item');
 
 serviceItems.forEach(item => {
@@ -14,13 +13,17 @@ serviceItems.forEach(item => {
 });
 
 /*==================== SCROLL REVEAL ====================*/
-ScrollReveal({
-    distance: '60px',
-    duration: 2000,
-    delay: 200,
-    reset: false // Animasi hanya sekali saat scroll ke bawah
-});
+// Pastikan library ScrollReveal sudah dimuat sebelum script ini dijalankan
+if (typeof ScrollReveal !== 'undefined') {
+    ScrollReveal({
+        distance: '60px',
+        duration: 2000,
+        delay: 200,
+        reset: false 
+    });
 
-ScrollReveal().reveal('.hero-content, .section-header', { origin: 'top' });
-ScrollReveal().reveal('.hero-img', { origin: 'bottom', delay: 500 });
-ScrollReveal().reveal('.stats, .services-list, .work-grid, .row, .skills-wrapper, .contact-card', { origin: 'bottom', interval: 100 });
+    ScrollReveal().reveal('.hero-content, .section-header', { origin: 'top' });
+    ScrollReveal().reveal('.hero-img', { origin: 'bottom', delay: 500 });
+    ScrollReveal().reveal('.services-list, .experience-grid, .skills-wrapper-modern, .contact-card', { origin: 'bottom', interval: 100 });
+    ScrollReveal().reveal('.exp-card', { interval: 200 }); // Efek muncul satu per satu untuk kartu experience
+}
