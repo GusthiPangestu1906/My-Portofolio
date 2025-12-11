@@ -668,6 +668,38 @@ body {
 }
 
 /* =========================================
+   PERFORMANCE OPTIMIZATION
+   ========================================= */
+
+/* Paksa akselerasi hardware pada elemen yang bergerak */
+.floating-widget, 
+.glass-card, 
+.swiper-slide {
+    will-change: transform; /* Hint ke browser: "Elemen ini bakal gerak lho" */
+    transform: translateZ(0); /* Hack untuk memicu GPU */
+}
+
+/* Matikan pointer events saat scroll untuk FPS lebih tinggi (Optional, kadang bikin UX aneh) */
+/* .is-scrolling { pointer-events: none; } */
+
+/* Kurangi blur di mobile karena berat */
+@media (max-width: 768px) {
+    .glass-card {
+        backdrop-filter: blur(5px) !important; /* Blur lebih sedikit */
+    }
+    .ambient-glow::before, 
+    .ambient-glow::after {
+        filter: blur(80px); /* Blur radius dikurangi */
+        opacity: 0.1; /* Opacity dikurangi */
+    }
+    
+    /* Sembunyikan floating elements yang terlalu banyak di mobile */
+    .floating-widget {
+        display: none !important; /* Pastikan benar-benar hilang */
+    }
+}
+
+/* =========================================
    ANIMASI SELESAI LOADING (GATE OPEN & ZOOM OUT)
    ========================================= */
 
