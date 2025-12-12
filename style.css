@@ -772,14 +772,16 @@ body {
 }
 
 
+/* ... (Bagian atas file style.css biarkan saja seperti sebelumnya) ... */
+
 /* =========================================
-   NEON SKILLS CARDS (SANGAR EDITION)
+   NEON SKILLS CARDS (SANGAR EDITION - FIXED)
    ========================================= */
 
-/* FIX: Tambahkan padding atas agar kartu tidak terpotong saat naik */
+/* FIX 1: Tambahkan padding atas & bawah yang cukup agar kartu tidak terpotong saat naik */
 .skillsSwiper {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
 }
 
 /* Base Style untuk Card di dalam Swiper */
@@ -793,81 +795,69 @@ body {
     overflow: hidden;
 }
 
-/* Neon Glow saat Hover ATAU Active (Kartu Tengah) */
+/* FIX 2: Tambahkan .swiper-slide-active agar kartu tengah otomatis menyala */
+/* Efek Neon & Scale saat Hover ATAU saat Aktif (di tengah) */
 .skillsSwiper .swiper-slide:hover .group,
 .skillsSwiper .swiper-slide-active .group {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-12px) scale(1.05); /* Naik sedikit lebih tinggi */
     border-color: rgba(255, 255, 255, 0.5);
     box-shadow: 
-        0 0 20px rgba(135, 80, 247, 0.4),   /* Inner glow ungu */
-        0 0 40px rgba(135, 80, 247, 0.2),   /* Outer glow ungu */
-        inset 0 0 20px rgba(135, 80, 247, 0.1); /* Inner shadow */
+        0 0 25px rgba(135, 80, 247, 0.5),   /* Glow lebih kuat */
+        0 0 50px rgba(135, 80, 247, 0.3),
+        inset 0 0 20px rgba(135, 80, 247, 0.1);
+    z-index: 10; /* Pastikan kartu aktif ada di atas kartu lain */
 }
 
-/* --- WARNA KHUSUS PER TOOL (Customize sesuai brand) --- */
+/* --- WARNA KHUSUS PER TOOL (Dengan Active State) --- */
 
 /* 1. OBS Studio (Putih/Abu-abu) */
 .skillsSwiper .swiper-slide:nth-child(1):hover .group,
-.skillsSwiper .swiper-slide:nth-child(1).swiper-slide-active .group {
-    border-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 
-        0 0 25px rgba(255, 255, 255, 0.3),
-        0 0 50px rgba(255, 255, 255, 0.1),
-        inset 0 0 30px rgba(255, 255, 255, 0.05);
+.skillsSwiper .swiper-slide:nth-child(1).swiper-slide-active .group,
+.skillsSwiper .swiper-slide-duplicate:nth-child(1).swiper-slide-active .group { /* Support Loop */
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2);
 }
 
 /* 2. Photoshop (Biru Tua) */
 .skillsSwiper .swiper-slide:nth-child(2):hover .group,
 .skillsSwiper .swiper-slide:nth-child(2).swiper-slide-active .group {
     border-color: #31A8FF;
-    box-shadow: 
-        0 0 25px rgba(49, 168, 255, 0.4),
-        0 0 50px rgba(49, 168, 255, 0.2),
-        inset 0 0 30px rgba(49, 168, 255, 0.1);
+    box-shadow: 0 0 30px rgba(49, 168, 255, 0.5), 0 0 60px rgba(49, 168, 255, 0.3);
 }
 
 /* 3. Canva (Teal/Cyan) */
 .skillsSwiper .swiper-slide:nth-child(3):hover .group,
 .skillsSwiper .swiper-slide:nth-child(3).swiper-slide-active .group {
     border-color: #00C4CC;
-    box-shadow: 
-        0 0 25px rgba(0, 196, 204, 0.4),
-        0 0 50px rgba(0, 196, 204, 0.2),
-        inset 0 0 30px rgba(0, 196, 204, 0.1);
+    box-shadow: 0 0 30px rgba(0, 196, 204, 0.5), 0 0 60px rgba(0, 196, 204, 0.3);
 }
 
-/* 4. Figma (Ungu/Merah - Gradient feel) */
+/* 4. Figma (Ungu) */
 .skillsSwiper .swiper-slide:nth-child(4):hover .group,
 .skillsSwiper .swiper-slide:nth-child(4).swiper-slide-active .group {
     border-color: #A259FF;
-    box-shadow: 
-        0 0 25px rgba(162, 89, 255, 0.4),
-        0 0 50px rgba(242, 78, 30, 0.2), /* Campur sedikit merah */
-        inset 0 0 30px rgba(162, 89, 255, 0.1);
+    box-shadow: 0 0 30px rgba(162, 89, 255, 0.5), 0 0 60px rgba(162, 89, 255, 0.3);
 }
 
-/* 5. Node JS (Hijau) */
+/* 5. Node JS (Ungu - Sesuai Warna Logo) */
 .skillsSwiper .swiper-slide:nth-child(5):hover .group,
 .skillsSwiper .swiper-slide:nth-child(5).swiper-slide-active .group {
-    border-color: #68A063;
+    border-color: #8750f7; /* Menggunakan warna Primary/Logo */
     box-shadow: 
-        0 0 25px rgba(104, 160, 99, 0.4),
-        0 0 50px rgba(104, 160, 99, 0.2),
-        inset 0 0 30px rgba(104, 160, 99, 0.1);
+        0 0 30px rgba(135, 80, 247, 0.5), 
+        0 0 60px rgba(135, 80, 247, 0.3),
+        inset 0 0 20px rgba(135, 80, 247, 0.1);
 }
 
 /* 6. Docker (Biru Laut) */
 .skillsSwiper .swiper-slide:nth-child(6):hover .group,
 .skillsSwiper .swiper-slide:nth-child(6).swiper-slide-active .group {
     border-color: #2496ED;
-    box-shadow: 
-        0 0 25px rgba(36, 150, 237, 0.4),
-        0 0 50px rgba(36, 150, 237, 0.2),
-        inset 0 0 30px rgba(36, 150, 237, 0.1);
+    box-shadow: 0 0 30px rgba(36, 150, 237, 0.5), 0 0 60px rgba(36, 150, 237, 0.3);
 }
 
 /* --- EFEK KILATAN CAHAYA (SHEEN EFFECT) --- */
-/* Garis cahaya yang lewat cepat saat hover/active */
+/* Aktif juga saat Active State */
 .skillsSwiper .swiper-slide .group::before {
     content: '';
     position: absolute;
@@ -878,7 +868,7 @@ body {
     background: linear-gradient(
         90deg, 
         transparent, 
-        rgba(255, 255, 255, 0.2), 
+        rgba(255, 255, 255, 0.4), /* Lebih terang sedikit */
         transparent
     );
     transform: skewX(-25deg);
@@ -887,26 +877,28 @@ body {
     pointer-events: none;
 }
 
+/* Jalankan animasi saat hover ATAU active */
 .skillsSwiper .swiper-slide:hover .group::before,
 .skillsSwiper .swiper-slide-active .group::before {
-    animation: shine 0.7s ease-in-out;
+    animation: shine 1.5s ease-in-out infinite; /* Loop animasi biar terus mengkilap saat diam di tengah */
 }
 
 @keyframes shine {
-    0% { left: -150%; }
-    100% { left: 150%; }
+    0% { left: -150%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { left: 150%; opacity: 0; }
 }
 
 /* --- ANIMASI ICON --- */
-/* Icon sedikit berdenyut saat hover/active */
 .skillsSwiper .swiper-slide:hover img,
 .skillsSwiper .swiper-slide-active img {
-    animation: pulse-icon 1.5s infinite;
-    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5)); /* Glow pada gambar icon */
+    animation: pulse-icon 2s infinite;
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.6));
+    transform: scale(1.1); /* Icon membesar */
 }
 
 @keyframes pulse-icon {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% { transform: scale(1.1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1.1); }
 }
