@@ -811,26 +811,51 @@ const translations = {
 // 2. State Bahasa Saat Ini (Default ID)
 let currentLang = 'id'; 
 
-// 3. Fungsi Toggle
+// 3. Fungsi Toggle (Versi Matematika Presisi)
 function toggleLanguage() {
     // Switch state
     currentLang = currentLang === 'id' ? 'en' : 'id';
     
-    // Update Teks Biasa
+    // Update Konten Website
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[currentLang][key]) {
-            // Gunakan innerHTML biar bisa baca tag <b> atau <br> jika ada di kamus
             el.innerHTML = translations[currentLang][key];
         }
     });
 
-    // Update Tampilan Tombol Indicator
-    const indicator = document.getElementById('lang-indicator');
-    if(indicator) indicator.innerText = currentLang.toUpperCase();
+    // --- LOGIKA ANIMASI PRESISI ---
+    const slider = document.getElementById('lang-slider');
+    const labelId = document.getElementById('label-id');
+    const labelEn = document.getElementById('label-en');
 
-    // Update Typewriter (Efek Ketikan)
+    if (slider && labelId && labelEn) {
+        if (currentLang === 'en') {
+            // Posisi EN: Geser sejauh 100% dari lebar slidernya sendiri
+            // Ini menjamin posisi simetris sempurna tanpa hitungan pixel manual
+            slider.style.transform = 'translateX(100%)'; 
+            
+            // Update Warna Teks
+            labelId.classList.remove('text-white');
+            labelId.classList.add('text-gray-500');
+            
+            labelEn.classList.remove('text-gray-500');
+            labelEn.classList.add('text-white');
+        } else {
+            // Posisi ID: Geser balik ke 0
+            slider.style.transform = 'translateX(0)';
+            
+            // Update Warna Teks
+            labelEn.classList.remove('text-white');
+            labelEn.classList.add('text-gray-500');
+            
+            labelId.classList.remove('text-gray-500');
+            labelId.classList.add('text-white');
+        }
+    }
+
+    // Update Typewriter
     updateTypewriterLanguage();
 }
 
