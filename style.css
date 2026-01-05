@@ -902,3 +902,53 @@ body {
     50% { transform: scale(1.2); }
     100% { transform: scale(1.1); }
 }
+
+/* =========================================
+   INTRO SEQUENCE STYLES (GOD RAYS)
+   ========================================= */
+.light-rays {
+    background: radial-gradient(
+        circle at 50% -20%, 
+        rgba(255, 255, 255, 0.15) 0%, 
+        transparent 60%
+    );
+
+    /* Masking untuk membuat efek garis-garis cahaya */
+    mask-image: conic-gradient(
+        from 0deg at 50% -20%, 
+        transparent 0deg, black 10deg, transparent 20deg, 
+        black 40deg, transparent 50deg, black 60deg, 
+        transparent 70deg, black 90deg, transparent 100deg,
+        black 130deg, transparent 140deg, black 160deg, 
+        transparent 180deg, black 200deg, transparent 220deg,
+        black 240deg, transparent 260deg, black 290deg,
+        transparent 310deg, black 330deg, transparent 360deg
+    );
+    -webkit-mask-image: conic-gradient(
+        from 0deg at 50% -20%, 
+        transparent 0deg, black 10deg, transparent 20deg, 
+        black 40deg, transparent 50deg, black 60deg, 
+        transparent 70deg, black 90deg, transparent 100deg,
+        black 130deg, transparent 140deg, black 160deg, 
+        transparent 180deg, black 200deg, transparent 220deg,
+        black 240deg, transparent 260deg, black 290deg,
+        transparent 310deg, black 330deg, transparent 360deg
+    );
+    animation: rotateRays 40s linear infinite;
+    transform-origin: 50% -20%;
+}
+
+@keyframes rotateRays {
+    from { transform: rotate(0deg) scale(1.5); }
+    to { transform: rotate(360deg) scale(1.5); }
+}
+
+/* Pastikan body tidak bisa discroll saat intro */
+body.locked {
+    overflow: hidden;
+}
+
+#intro-sequence video {
+    /* Filter opsional untuk membuat video lebih menyatu dengan tema ungu */
+    filter: sepia(20%) hue-rotate(220deg) contrast(1.1);
+}
